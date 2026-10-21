@@ -1,20 +1,14 @@
-// EDITA AQUÍ LOS DATOS DE LA BODA. Guarda los cambios y GitHub Pages los publicará.
+// Datos de la invitación oficial. Modifica únicamente los campos que necesites.
 window.WEDDING_CONFIG = {
-  nombres: ["Joselito", "Hedria"],
-  fecha: "2026-12-01T10:00:00-04:00", // Hora de Bolivia; cuenta regresiva al discurso
-  fechaTexto: "MARTES · 1 DE DICIEMBRE · 2026",
-  lugarGeneral: "Algún lugar del mundo",
-  discurso: { lugar: "Insertar ubicación", maps: "" },
-  recepcion: { lugar: "Insertar ubicación", maps: "" },
-  zoom: { enlace: "", id: "", contrasena: "" },
-  vestimenta: "Formal",
-  whatsapp: "59163452176",
-  musica: "", // Ejemplo: "assets/musica.mp3"
+  nombres: ["Hedria", "Joselito"],
+  fecha: "2026-12-13T14:30:00-04:00", // Bolivia, 2:30 p. m.; Brasil (Brasilia), 3:30 p. m.
+  zoom: {
+    enlace: "" // Se enviará días antes; al completar aquí aparecerá el botón
+  },
   fotos: {
-    principal: "assets/foto-pendiente.svg",
-    galeria1: "assets/foto-pendiente.svg",
-    galeria2: "assets/foto-pendiente.svg",
-    galeria3: "assets/foto-pendiente.svg",
-    qrRegalos: "assets/qr-pendiente.svg"
-  }
+    principal: "assets/hedria-joselito.webp", // Fotografía oficial de la pareja
+    qrRegalos: "assets/qr-pendiente.svg" // Cambiar por "assets/qr-deposito.png" cuando esté disponible
+  },
+  qrConfirmado: false, // Cambiar a true al adjuntar el QR real
+  musica: "" // Opcional: "assets/musica.mp3"
 };
