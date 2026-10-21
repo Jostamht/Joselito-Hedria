@@ -1,31 +1,26 @@
-# Invitación de boda — Joselito y Hedria 🌿
+# Invitación de boda · Hedria y Joselito 🌿
 
-Sitio estático para la boda del **1 de diciembre de 2026**. Inspiración botánica verde salvia, marfil y verde bosque, con sobre animado, cuenta regresiva, eventos, Zoom, QR de regalos, galería, música opcional y confirmación por WhatsApp.
+Invitación digital botánica en verde salvia y marfil, con sobre animado y ceremonia virtual.
 
-## Publicar con GitHub Pages
-1. En el repositorio, abre **Settings → Pages**.
-2. En **Build and deployment**, selecciona **Deploy from a branch**.
-3. Elige **main** y **/(root)**, y pulsa **Save**.
-4. Abre la dirección que GitHub muestre. Habitualmente será https://jostamht.github.io/Boda-Prueba/ .
+**Boda: domingo 13 de diciembre de 2026.** Bolivia: 2:30 p. m. · Brasil (horario de Brasilia): 3:30 p. m.
 
-> La web NO está publicada automáticamente por subir el código: verifica que GitHub Pages esté activado.
+## Publicar
+En [Settings → Pages](https://github.com/Jostamht/Boda-Prueba/settings/pages), selecciona **Deploy from a branch → main → /(root)** y guarda. Cuando GitHub Pages esté activo: https://jostamht.github.io/Boda-Prueba/
 
-## Editar datos
-Abre **config.js** en GitHub y pulsa el lápiz para editar. Ahí puedes cambiar nombres, fecha/hora, ubicación general, lugares y enlaces de Maps, ID/enlace/contraseña de Zoom, vestimenta, número de WhatsApp, fotos, QR de regalos y música.
+## Personalización (config.js)
+El texto oficial, Mateo 19:6, fecha y horarios se muestran en `index.html`. El archivo `config.js` contiene los nombres, la cuenta regresiva, el enlace de Zoom, la fotografía, el QR y la música.
 
-## Añadir fotos y QR
-1. Sube archivos JPG, PNG o WebP a la carpeta **assets/**.
-2. En **config.js**, reemplaza el nombre de muestra por la ruta, por ejemplo `"assets/nuestra-foto.jpg"`.
-3. Para los regalos, reemplaza `qrRegalos: "assets/qr-pendiente.svg"` por `qrRegalos: "assets/qr-banco.png"`.
+### Código QR pendiente
+Ahora se muestra un **marcador de posición** (`assets/qr-pendiente.svg`), sin inventar ningún código ni datos bancarios.
+1. Sube tu imagen a la carpeta `assets/`, por ejemplo `assets/qr-deposito.png`.
+2. Cambia `qrRegalos` a `"assets/qr-deposito.png"` y `qrConfirmado` a `true`.
+3. Guarda el cambio.
 
-Los SVG incluidos son imágenes de relleno; puedes mantenerlos durante las pruebas.
+### Enlace de Zoom
+Todavía no se publica ningún enlace. Se muestra el mensaje «El enlace para acompañarnos será enviado días antes». Si deseas habilitar también un botón, rellena `zoom.enlace` con una URL https://. Si prefieres enviar el enlace privadamente, déjalo vacío.
 
-## Música
-Sube el audio a `assets/` y configura `musica: "assets/nuestra-cancion.mp3"`. El botón se activa automáticamente. La música solo se inicia al tocar el control, ya que los navegadores suelen bloquear la reproducción automática.
+### Fotografía y música
+La foto principal se configura en `fotos.principal`. Para cambiarla, sube otra imagen a `assets/` y cambia la ruta. La música es opcional: sube `assets/musica.mp3` y establece `musica: "assets/musica.mp3"`.
 
-## Notas
-- El contador finaliza el **1 de diciembre de 2026, 10:00 a. m. (UTC-04:00)**.
-- El año **2026** es provisional hasta confirmar la fecha definitiva.
-- Se dejan «Insertar ubicación» y los datos de Zoom vacíos deliberadamente; no se publican enlaces ficticios.
-- El RSVP abre WhatsApp y prellena un mensaje; **no almacena datos personales** en el sitio.
-- Para conservar la privacidad del Zoom, añade los datos cuando quieras compartirlos con los invitados. GitHub Pages y este repositorio son públicos.
+## Importante
+El repositorio y GitHub Pages son públicos. Evita subir IDs/contraseñas privados de Zoom o datos personales sensibles al código.
