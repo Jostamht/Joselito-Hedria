@@ -43,6 +43,8 @@
   function reveal() {
     if (overlay.classList.contains("is-open")) return;
     overlay.classList.add("is-open");
+    // El clic en el sello también sirve para iniciar el audio (si el navegador lo permite).
+    if (c.musica && !musicToggle.disabled && audio.paused) musicToggle.click();
     document.body.classList.remove("invitation-locked");
     open.disabled = true;
     setTimeout(() => {
