@@ -10,5 +10,5 @@ window.WEDDING_CONFIG = {
     qrRegalos: "assets/qr-pendiente.svg" // Cambiar por "assets/qr-deposito.png" cuando esté disponible
   },
   qrConfirmado: false, // Cambiar a true al adjuntar el QR real
-  musica: "" // Opcional: "assets/musica.mp3"
+  musica: "https://at.adobe.com/T7nmeHFXt3RbLp3V" // Enlace temporal del MP3; reemplazar por assets/musica.mp3 al subirlo a GitHub
 };
