@@ -1,0 +1,38 @@
+name: Agregar QR Banco Unión
+
+on:
+  push:
+    paths:
+      - .github/workflows/importar-qr.yml
+
+permissions:
+  contents: write
+
+jobs:
+  importar-qr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar estado actual
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Importar imagen original del QR
+        env:
+          QR_SOURCE: "https://at.adobe.com/9MrqAAmpcNL0oEew"
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          curl --fail --location --retry 3 --connect-timeout 20 --max-time 180 --output assets/qr-banco-union.jpg "$QR_SOURCE"
+          test "$(wc -c < assets/qr-banco-union.jpg)" -ge 100000
+          test "$(file --brief --mime-type assets/qr-banco-union.jpg)" = "image/jpeg"
+      - name: Guardar solo el QR
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/qr-banco-union.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: agregar QR original Banco Unión"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
