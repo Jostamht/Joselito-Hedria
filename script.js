@@ -5,8 +5,8 @@
   const label = (id, value) => { if(el(id)) el(id).textContent = value; };
   const photo = (id, value) => { if(el(id) && value) el(id).src = value; };
   const url = value => /^https:\/\/[^\s]+$/i.test(value || "") ? value : "";
-  label("nameOne", c.nombres?.[0] || "Hedria");
-  label("nameTwo", c.nombres?.[1] || "Joselito");
+  label("nameOne", c.nombres?.[0] || "Joselito");
+  label("nameTwo", c.nombres?.[1] || "Hedria");
   photo("mainPhoto", c.fotos?.principal);
   photo("giftQr", c.fotos?.qrRegalos);
   if (c.qrConfirmado) {
