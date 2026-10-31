@@ -1,123 +1,80 @@
-# 💍 Joselito & Hedria · ¡Nos casamos! 🌿
+# Joselito & Hedria · ¡Nos casamos! 🌿
 
-*«El cariño no conoce distancias.»*
+**[jostamht.github.io/Joselito-Hedria](https://jostamht.github.io/Joselito-Hedria/)**
 
-**👉 [jostamht.github.io/Joselito-Hedria](https://jostamht.github.io/Joselito-Hedria/)**
+Esta es la invitación a nuestra boda. Queríamos que llegara a todos, estén donde estén, así que la hicimos en forma de página web: un sobre que se abre con un sello de cera, en verde salvia y marfil.
 
-La invitación digital de nuestra boda: una web botánica en verde salvia y marfil que se abre como un sobre con sello de cera, para que nuestra gente nos acompañe **desde donde esté**.
+- **Fecha:** domingo 13 de diciembre de 2026
+- **Hora en Bolivia:** 2:30 p. m.
+- **Hora en Brasil** (Brasilia): 3:30 p. m.
+- **Modalidad:** transmisión en vivo por Zoom
 
-| | |
-|---|---|
-| 📅 **Fecha** | Domingo **13 de diciembre de 2026** |
-| 🇧🇴 **Hora en Bolivia** | 2:30 p. m. |
-| 🇧🇷 **Hora en Brasil** (Brasilia) | 3:30 p. m. |
-| 💻 **Modalidad** | Transmisión en vivo por Zoom |
+> «Así que ya no son dos, sino una sola carne. Por lo tanto, lo que Dios ha unido, que no lo separe ningún hombre». — Mateo 19:6
 
----
+## Qué hay en la invitación
 
-## ✉️ Qué se encuentra el invitado
-
-La invitación se recorre de arriba abajo:
-
-1. **El sobre.** Antes de ver nada, aparece un sobre con monograma **J & H** y un sello de cera. Se toca el sello y se abre. Si hay música configurada, empieza a sonar en ese momento.
-2. **Portada.** «¡Nos casamos!», los nombres, y una frase para quien quiera acompañarnos.
-3. **Reserva la fecha.** Diciembre, 13, domingo, con una invitación a compartir el día «sin importar la distancia».
-4. **Cuenta regresiva.** Días, horas, minutos y segundos hasta el gran momento. Cuando llega el día, cambia a «¡Hoy es nuestro gran día!».
+1. **El sobre.** Al tocar el sello con nuestras iniciales, se abre la invitación y empieza a sonar la música.
+2. **Portada.** «¡Nos casamos!» y nuestros nombres.
+3. **Reserva la fecha.** El día, escrito en grande.
+4. **Cuenta regresiva.** Los días, horas, minutos y segundos que faltan.
 5. **Mateo 19:6.** El versículo que nos acompaña.
 6. **Nuestra foto.** «Acompáñanos desde donde estés».
-7. **Zoom.** Las horas de Bolivia y Brasil lado a lado, y el aviso de que el enlace se enviará días antes.
-8. **Un detalle con cariño.** Un código QR de depósito para quien quiera hacernos un regalo; se toca para ampliarlo.
+7. **Zoom.** Las horas de Bolivia y Brasil, y el aviso de que el enlace llegará días antes.
+8. **Un detalle con cariño.** Un código QR para quien quiera hacernos un regalo.
 9. **Cierre.** «Gracias por ser parte de nuestra historia».
 
-Además, un botón de **música** siempre visible arriba a la derecha, para activarla o pausarla cuando se quiera.
+Arriba a la derecha hay un botón para activar o pausar la música.
 
----
+## Cómo está hecha
 
-## 🎨 Cómo está hecha
-
-HTML, CSS y JavaScript puros, sin frameworks ni compilación. Para verla en una computadora, abre `index.html` en el navegador.
+Es una página estática en HTML, CSS y JavaScript, sin frameworks ni compilación. Se puede abrir `index.html` directamente en el navegador.
 
 ```
-Joselito-Hedria/
-├── index.html     → el contenido y la vista previa al compartir
-├── styles.css     → paleta salvia y marfil
-├── config.js      → los datos de la boda (lo único que se edita)
-├── script.js      → sobre, cuenta regresiva, música y animaciones
-├── assets/        → foto, QR, música, ilustración botánica
-└── .github/       → automatizaciones (ver abajo)
+├── index.html    contenido y vista previa al compartir
+├── styles.css    diseño
+├── config.js     datos de la boda
+├── script.js     sobre, cuenta regresiva, música y animaciones
+├── assets/       foto, QR, música e ilustración botánica
+└── .github/      automatizaciones
 ```
 
-- **Tipografías:** Cormorant Garamond (títulos), Great Vibes (caligrafía) y DM Sans (texto).
-- **Cuenta regresiva:** funciona con la hora de Bolivia (`2026-12-13T14:30:00-04:00`), así que marca lo mismo para todos sin importar dónde estén.
-- **Accesibilidad:** el sobre se anuncia como diálogo, las decoraciones se ocultan a los lectores de pantalla y el temporizador está etiquetado.
+Las tipografías son Cormorant Garamond, Great Vibes y DM Sans. La cuenta regresiva usa la hora de Bolivia, así que marca lo mismo en cualquier país.
 
----
+## Configuración
 
-## ⚙️ Personalización (`config.js`)
-
-Todo lo que cambia está en este archivo, y no hace falta tocar nada más:
+Los datos que pueden cambiar están en `config.js`:
 
 ```js
 window.WEDDING_CONFIG = {
   nombres: ["Joselito", "Hedria"],
   fecha: "2026-12-13T14:30:00-04:00",
-  zoom: { enlace: "" },                          // ← pendiente
+  zoom: { enlace: "" },
   fotos: {
-    principal: "assets/hedria-joselito.webp",    // foto de la pareja
-    qrRegalos: "assets/qr-banco-union.jpg"       // QR de regalos
+    principal: "assets/hedria-joselito.webp",
+    qrRegalos: "assets/qr-banco-union.jpg"
   },
   qrConfirmado: true,
   musica: "assets/musica.mp3"
 };
 ```
 
-### Estado actual
+**Enlace de Zoom.** Todavía no está publicado. Cuando esté listo, puede ponerse en `zoom.enlace` (debe empezar con `https://`), y aparecerá el botón «Ingresar a la transmisión». También puede dejarse vacío y enviarse por mensaje privado a cada invitado.
 
-| Elemento | Estado |
-|---|---|
-| Nombres y fecha | ✅ Listos |
-| Foto de la pareja | ✅ Incorporada |
-| Música | ✅ `assets/musica.mp3` incluida en el repo |
-| QR de regalos | ✅ Incorporado |
-| **Enlace de Zoom** | ⏳ **Pendiente** |
+**Foto y QR.** Para cambiarlos se sube la imagen nueva a `assets/` y se actualiza la ruta en `config.js`.
 
-### Cuando tengamos el enlace de Zoom
+## Vista previa al compartir
 
-Hay dos opciones:
+Al pegar el enlace en WhatsApp o redes aparece «💍 ¡Nos casamos! | Joselito y Hedria», con la fecha y nuestra foto. La imagen (`assets/portada-whatsapp.jpg`, 1200×630) la genera sola el workflow `crear-miniatura.yml` cada vez que cambia la foto de la pareja. Si WhatsApp muestra una vista previa antigua, se agrega un parámetro al enlace, por ejemplo `?v=2`.
 
-- **Mostrarlo en la web:** pega la URL en `zoom.enlace` (tiene que empezar con `https://`). Aparecerá un botón **«Ingresar a la transmisión»** y desaparecerá el aviso de «enlace disponible próximamente».
-- **Enviarlo en privado:** deja `enlace` vacío y mándalo por WhatsApp a los invitados. Es la opción más segura, porque esta web es pública.
+El workflow `importar-musica.yml` sirvió para guardar la música dentro del repositorio y ya no hace falta.
 
-### Cambiar la foto o el QR
-Sube la imagen nueva a `assets/` y cambia la ruta en `config.js`. Si se reemplaza `assets/hedria-joselito.webp`, la vista previa para WhatsApp se regenera sola (ver abajo).
+## Publicación
+
+La web se publica con GitHub Pages desde la rama `main`. Cada cambio se actualiza solo, normalmente en uno o dos minutos.
+
+El repositorio y la página son públicos, por lo que no se suben contraseñas de Zoom ni datos personales.
 
 ---
 
-## 🤖 Automatizaciones
-
-- **`crear-miniatura.yml`** genera `assets/portada-whatsapp.jpg` (1200×630) a partir de la foto de la pareja, cada vez que esa foto cambia. Es la imagen que sale al compartir el enlace.
-- **`importar-musica.yml`** descargó el MP3 desde un enlace externo para guardarlo dentro del repo. Ya cumplió su trabajo, porque `assets/musica.mp3` existe; solo vuelve a correr si se ejecuta a mano.
-
-### Al compartir por WhatsApp
-Al pegar el enlace aparece el título «💍 ¡Nos casamos! | Joselito y Hedria», la fecha y la foto de portada. Si WhatsApp sigue mostrando una vista previa vieja, agrega un parámetro inocuo al enlace (por ejemplo `?v=2`) para que lo vuelva a leer.
-
----
-
-## 🌐 Publicación
-
-La web se sirve con **GitHub Pages** desde `main` (carpeta raíz). Para revisar o cambiar esa configuración: [Settings → Pages](https://github.com/Jostamht/Joselito-Hedria/settings/pages).
-
-Cada cambio que se sube a `main` se publica solo, normalmente en uno o dos minutos.
-
----
-
-## ⚠️ Importante
-
-- **El repositorio y la web son públicos.** Cualquiera con el enlace puede ver todo lo que hay aquí, incluido el QR de regalos.
-- No subas IDs ni contraseñas de Zoom, ni datos personales sensibles, al código.
-- Si el QR cambia o se prefiere no exponerlo, se puede retirar de `index.html` (sección «Un detalle con cariño») y de `assets/` en cualquier momento.
-
----
-
-*Una invitación hecha con amor.* 🌿
 *13 · diciembre · 2026*
+*Con cariño, Joselito y Hedria* 🌿
